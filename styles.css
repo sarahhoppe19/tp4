@@ -7,7 +7,6 @@ body {
   background-color: #c4a484;
   padding: 0;
   margin: 0;
-  
 }
 
 #recipeBanner {
@@ -17,7 +16,7 @@ body {
   background-image: url(chiliPhoto2.jpg);
   background-size: cover;
   background-position: center center;
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 #recipeBanner h1 {
@@ -27,6 +26,15 @@ body {
   vertical-align: text-bottom;
   color: black;
   text-shadow: 0px 5px 5px #FFFFFF;
+}
+
+#recipeBanner h2 {
+  Font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: text-bottom;
+  color: black;
+  text-shadow: 0px 2px 2px #FFFFFF;
 }
 
 #recipeColumns {
@@ -50,7 +58,7 @@ ol {
 
 ul {
   margin-top: 2px;
-  list-style-type: square; 
+  list-style-type: square;
 }
 
 li {
@@ -58,7 +66,8 @@ li {
   font-size: 14px;
 }
 
-li span {       /*this was used in tp3 for the highlighting parts of the assignment, they have been removed for now*/
+li span {
+  /*this was used in tp3 for the highlighting parts of the assignment, they have been removed for now*/
   background-color: yellow;
   color: black;
 }
@@ -69,4 +78,25 @@ li span {       /*this was used in tp3 for the highlighting parts of the assignm
   font-style: italic;
 }
 
-/*FROM HERE ON INCLUDES MEDIA QUERIES------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------FROM HERE ON INCLUDES MEDIA QUERIES*/
+
+@media (orientation: portrait) {
+  #recipeColumns {
+    display: inline-block;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 575px) {
+  #recipeBanner {
+    height: 25vh;
+    background-size: fixed;
+  }
+  
+  #recipeBanner h1 {
+  font-size: 60px;
+}
+  
+  #recipeColumns {
+    display: inline-block;
+  }
+}
